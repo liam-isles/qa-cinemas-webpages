@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align-content="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Movie Carousel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div style="text-align:left">
+  <img width="100" src="{{jWick}}">
+</div>
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+
+<style>
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #465;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: LightSlateGray;
+    color: white;
+    text-align: center;
+  }
+</style>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#Films">Films</a></li>
+  <li><a href="#Times">Times</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+
+<body>
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+  <div class="carousel-inner" style="height: auto; width: 100%; height: 600px">
+    <div class="item active" align-content: center>
+      <img [src]="jWick" alt="wickmeister" style="margin: auto">
+    </div>
+
+    <div class="item">
+      <img [src]="jWick" alt="wickmeister" style="margin: auto">
+    </div>
+
+    <div class="item">
+      <img [src]="jWick" style="margin: auto">
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <div class="glyphicon glyphicon-chevron-left"></div>
+    <div class="sr-only">Previous</div>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <div class="glyphicon glyphicon-chevron-right"></div>
+    <div class="sr-only">Next</div>
+  </a>
+</div>
+
+  <div class ="footer">
+    <ul>
+      <li>
+        <h2><a target="_blank" rel="noopener" href="https://google.co.uk">Contacts</a></h2>
+      </li>
+      <li>
+        <h2><a target="_blank" rel="noopener" href="https://youtube.co.uk">About</a></h2>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
